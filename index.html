@@ -1,242 +1,849 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.4">
-  <style type="text/css">
-    body {background-color: #0c0c0c}
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 24.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'PingFang SC'; color: #585858; -webkit-text-stroke: #585858}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #df2217; -webkit-text-stroke: #df2217}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #df2217; -webkit-text-stroke: #df2217}
-    p.p6 {margin: 0.0px 0.0px 48.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #cac6bc; -webkit-text-stroke: #cac6bc}
-    p.p7 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff; background-color: #df2217}
-    p.p8 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #cac6bc; -webkit-text-stroke: #cac6bc}
-    p.p9 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.5); -webkit-text-stroke: rgba(255, 255, 255, 0.5)}
-    p.p10 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6; min-height: 15.0px}
-    p.p11 {margin: 0.0px 0.0px 0.0px 0.0px; font: 32.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6}
-    p.p12 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
-    p.p13 {margin: 0.0px 0.0px 0.0px 0.0px; font: 14.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.9); -webkit-text-stroke: rgba(255, 255, 255, 0.9); background-color: #df2217}
-    p.p15 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858; background-color: #141414}
-    p.p16 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6; background-color: #df2217; min-height: 15.0px}
-    p.p17 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
-    p.p18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
-    p.p19 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6; background-color: #1c8f6d; min-height: 15.0px}
-    p.p20 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6; background-color: #e1ab25; min-height: 15.0px}
-    p.p21 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6; background-color: #1759a0; min-height: 15.0px}
-    p.p22 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6; background-color: #ea5a1a; min-height: 15.0px}
-    p.p23 {margin: 0.0px 0.0px 0.0px 0.0px; font: 18.0px 'Helvetica Neue'; color: #cac6bc; -webkit-text-stroke: #cac6bc}
-    p.p24 {margin: 0.0px 0.0px 0.0px 0.0px; font: 36.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6}
-    p.p25 {margin: 0.0px 0.0px 0.0px 0.0px; font: 52.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p26 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p27 {margin: 0.0px 0.0px 0.0px 0.0px; font: 28.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p28 {margin: 0.0px 0.0px 0.0px 0.0px; font: 11.0px 'Helvetica Neue'; color: #ffffff; color: rgba(255, 255, 255, 0.65); -webkit-text-stroke: rgba(255, 255, 255, 0.65)}
-    p.p29 {margin: 0.0px 0.0px 0.0px 0.0px; font: 10.0px 'Helvetica Neue'; color: #df2217; -webkit-text-stroke: #df2217}
-    p.p30 {margin: 0.0px 0.0px 0.0px 0.0px; font: 20.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6}
-    p.p31 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
-    p.p32 {margin: 0.0px 0.0px 0.0px 0.0px; font: 28.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6}
-    p.p34 {margin: 0.0px 0.0px 0.0px 0.0px; font: 48.0px 'Helvetica Neue'; color: #df2217; -webkit-text-stroke: #df2217}
-    p.p35 {margin: 0.0px 0.0px 36.0px 0.0px; font: 15.0px 'Helvetica Neue'; color: #cac6bc; -webkit-text-stroke: #cac6bc}
-    p.p36 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6; background-color: #ffffff; background-color: rgba(255, 255, 255, 0.051); min-height: 16.0px}
-    p.p37 {margin: 0.0px 0.0px 0.0px 0.0px; font: 16.0px 'Helvetica Neue'; color: #ffffff; -webkit-text-stroke: #ffffff}
-    p.p39 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 11.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
-    p.p40 {margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 10.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
-    li.li18 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #585858; -webkit-text-stroke: #585858}
-    li.li38 {margin: 0.0px 0.0px 10.0px 0.0px; font: 13.0px 'Helvetica Neue'; color: #cac6bc; -webkit-text-stroke: #cac6bc}
-    span.s1 {font-kerning: none; background-color: rgba(12, 12, 12, 0.85)}
-    span.s2 {font-kerning: none; color: #df2217; background-color: rgba(12, 12, 12, 0.85); -webkit-text-stroke: 0px #df2217}
-    span.s3 {font-kerning: none}
-    span.s4 {font: 11.0px '.CJK Symbols Fallback SC'; font-kerning: none}
-    span.s5 {font-kerning: none; color: #df2217; -webkit-text-stroke: 0px #df2217}
-    span.s6 {font-kerning: none; color: #f1eee6; -webkit-text-stroke: 0px #f1eee6}
-    span.s7 {font-kerning: none; background-color: #df2217}
-    span.s8 {font-kerning: none; background-color: #ba2015}
-    span.s9 {font-kerning: none; background-color: #1c8f6d}
-    span.s10 {font-kerning: none; background-color: #141414}
-    span.s11 {font-kerning: none; background-color: #1759a0}
-    span.s12 {font-kerning: none; background-color: #e1ab25}
-    span.s13 {font-kerning: none; background-color: #ea5a1a}
-    span.s14 {font: 12.0px 'Helvetica Neue'; font-kerning: none; color: #f1eee6; -webkit-text-stroke: 0px #f1eee6}
-    span.s15 {font-kerning: none; background-color: #232323}
-    span.s16 {font: 64.0px '.PingFang UI SC'; font-kerning: none; color: #df2217; background-color: #232323; -webkit-text-stroke: 0px #df2217}
-    span.s17 {font: 12.0px 'Helvetica Neue'; font-kerning: none; background-color: #0c0c0c}
-    span.s18 {font-kerning: none; background-color: #0c0c0c}
-    span.s19 {font: 16.0px 'Helvetica Neue'; color: #df2217; background-color: #0c0c0c; -webkit-text-stroke: 0px #000000}
-    span.s20 {font: 16.0px 'Apple Symbols'; font-kerning: none; color: #df2217; background-color: #0c0c0c; -webkit-text-stroke: 0px #df2217}
-    span.s21 {font: 12.0px 'Helvetica Neue'; font-kerning: none; color: #f1eee6; background-color: #0c0c0c; -webkit-text-stroke: 0px #f1eee6}
-    span.s22 {font: 18.0px 'Helvetica Neue'; font-kerning: none; color: #f1eee6; background-color: #0c0c0c; -webkit-text-stroke: 0px #f1eee6}
-    span.s23 {font: 18.0px 'Helvetica Neue'; font-kerning: none; color: #f1eee6; -webkit-text-stroke: 0px #f1eee6}
-    span.s24 {font: 16.0px 'Apple SD Gothic Neo'; font-kerning: none; color: #df2217; background-color: #0c0c0c; -webkit-text-stroke: 0px #df2217}
-    span.s25 {font: 16.0px '.CJK Symbols Fallback SC'; font-kerning: none; color: #df2217; background-color: #0c0c0c; -webkit-text-stroke: 0px #df2217}
-    span.s26 {font: 11.0px '.CJK Symbols Fallback SC'; font-kerning: none; background-color: #df2217}
-    span.s27 {font: 20.0px '.CJK Symbols Fallback SC'; font-kerning: none; background-color: #232323}
-    span.s28 {font-kerning: none; color: #df2217; background-color: #0c0c0c; -webkit-text-stroke: 0px #df2217}
-    span.s29 {background-color: #0c0c0c; -webkit-text-stroke: 0px #000000}
-    span.s30 {font: 13.0px '.CJK Symbols Fallback SC'; font-kerning: none; background-color: #0c0c0c}
-    span.s31 {font: 11.0px '.CJK Symbols Fallback SC'; font-kerning: none; background-color: #0c0c0c}
-    span.s32 {font: 11.0px 'PingFang SC'; font-kerning: none; background-color: #0c0c0c}
-    ul.ul1 {list-style-type: disc}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cailo Inks — Vibrant Color, Effortless Flow</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;900&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink-black: #0e0e0e;
+  --ink-dark: #1a1a1a;
+  --ink-gray: #2e2e2e;
+  --ink-mid: #6b6b6b;
+  --ink-light: #d4d0c8;
+  --ink-white: #f4f1eb;
+  --cailo-red: #e8391c;
+  --cailo-orange: #f07020;
+  --cailo-gold: #e8b830;
+  --cailo-teal: #1a9e80;
+  --cailo-blue: #1a6eb0;
+  --accent: var(--cailo-red);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--ink-black);
+  color: var(--ink-white);
+  overflow-x: hidden;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 20px 48px;
+  background: rgba(14,14,14,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.nav-logo {
+  display: flex; align-items: baseline; gap: 10px;
+}
+.nav-logo-en {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: 24px; letter-spacing: 0.04em;
+  color: var(--ink-white);
+}
+.nav-logo-en span { color: var(--cailo-red); }
+.nav-logo-zh {
+  font-size: 11px; color: var(--ink-mid);
+  font-family: 'DM Mono', monospace;
+  letter-spacing: 0.08em;
+}
+.nav-links {
+  display: flex; gap: 36px; list-style: none;
+}
+.nav-links a {
+  font-size: 13px; font-weight: 500; letter-spacing: 0.06em;
+  color: var(--ink-light); text-decoration: none; text-transform: uppercase;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--cailo-red); }
+.nav-cta {
+  font-size: 12px; font-weight: 500; letter-spacing: 0.08em;
+  padding: 9px 22px; border: 1px solid var(--cailo-red);
+  color: var(--cailo-red); text-decoration: none; text-transform: uppercase;
+  transition: all 0.2s;
+}
+.nav-cta:hover { background: var(--cailo-red); color: #fff; }
+
+/* ── HERO ── */
+.hero {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  position: relative; overflow: hidden;
+}
+.hero-left {
+  display: flex; flex-direction: column; justify-content: center;
+  padding: 120px 64px 80px 64px;
+  position: relative; z-index: 2;
+}
+.hero-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--cailo-red); margin-bottom: 28px;
+  display: flex; align-items: center; gap: 10px;
+}
+.hero-tag::before {
+  content: ''; display: block;
+  width: 32px; height: 1px; background: var(--cailo-red);
+}
+.hero-h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: clamp(64px, 8vw, 104px);
+  line-height: 0.92; letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: var(--ink-white);
+  margin-bottom: 32px;
+}
+.hero-h1 .accent { color: var(--cailo-red); }
+.hero-sub {
+  font-size: 16px; line-height: 1.7; color: var(--ink-light);
+  max-width: 420px; margin-bottom: 48px; font-weight: 300;
+}
+.hero-sub strong { color: var(--ink-white); font-weight: 500; }
+.hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
+.btn-primary {
+  font-size: 13px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; text-decoration: none;
+  padding: 14px 32px; background: var(--cailo-red); color: #fff;
+  transition: all 0.2s;
+}
+.btn-primary:hover { background: #c82e15; transform: translateY(-1px); }
+.btn-secondary {
+  font-size: 13px; font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--ink-light); display: flex; align-items: center; gap: 8px;
+  transition: color 0.2s;
+}
+.btn-secondary:hover { color: var(--ink-white); }
+.btn-secondary::after { content: '→'; font-size: 16px; }
+
+/* hero right: color swatch tower */
+.hero-right {
+  position: relative; overflow: hidden;
+}
+.swatch-tower {
+  position: absolute; inset: 0;
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+}
+.swatch {
+  position: relative; overflow: hidden;
+  transition: flex 0.4s ease;
+}
+.swatch-label {
+  position: absolute; right: 20px; bottom: 12px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase;
+  color: rgba(255,255,255,0.5); opacity: 0;
+  transition: opacity 0.3s;
+}
+.swatch:hover .swatch-label { opacity: 1; }
+.s1 { background: #e8391c; }
+.s2 { background: #c8341a; }
+.s3 { background: #1a9e80; }
+.s4 { background: #1a1a1a; border-right: 1px solid #2e2e2e; }
+.s5 { background: #1a6eb0; }
+.s6 { background: #e8b830; }
+.s7 { background: #f07020; }
+
+/* ink drop animation overlay */
+.ink-grid {
+  position: absolute; inset: 0;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, transparent 1px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+}
+
+/* hero stats bar */
+.hero-stats {
+  position: absolute; bottom: 0; left: 0; right: 50%;
+  display: flex; border-top: 1px solid rgba(255,255,255,0.08);
+}
+.stat-item {
+  flex: 1; padding: 24px 28px;
+  border-right: 1px solid rgba(255,255,255,0.08);
+}
+.stat-item:last-child { border-right: none; }
+.stat-num {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 32px; color: var(--ink-white);
+  line-height: 1;
+}
+.stat-num span { color: var(--cailo-red); }
+.stat-desc { font-size: 11px; color: var(--ink-mid); margin-top: 4px; letter-spacing: 0.04em; }
+
+/* ── MARQUEE ── */
+.marquee-wrap {
+  background: var(--cailo-red); overflow: hidden;
+  padding: 14px 0; border-top: 1px solid rgba(0,0,0,0.1);
+}
+.marquee-track {
+  display: flex; gap: 0;
+  animation: marquee 28s linear infinite;
+  white-space: nowrap;
+}
+.marquee-item {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600; font-size: 14px; letter-spacing: 0.12em;
+  text-transform: uppercase; color: rgba(255,255,255,0.9);
+  padding: 0 32px;
+  display: flex; align-items: center; gap: 32px;
+}
+.marquee-item::after {
+  content: '✦'; font-size: 10px; color: rgba(255,255,255,0.5);
+}
+@keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+/* ── PRODUCTS ── */
+.products {
+  padding: 100px 64px;
+  background: var(--ink-dark);
+}
+.section-header {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  margin-bottom: 64px;
+}
+.section-tag {
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--cailo-red);
+  margin-bottom: 12px;
+}
+.section-h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: clamp(36px, 5vw, 56px);
+  line-height: 1; text-transform: uppercase; color: var(--ink-white);
+}
+.section-link {
+  font-size: 13px; font-weight: 500; letter-spacing: 0.08em;
+  text-transform: uppercase; text-decoration: none;
+  color: var(--ink-mid); display: flex; align-items: center; gap: 8px;
+  transition: color 0.2s; padding-bottom: 4px;
+  border-bottom: 1px solid var(--ink-gray);
+}
+.section-link:hover { color: var(--ink-white); border-color: var(--ink-light); }
+.section-link::after { content: '→'; }
+
+.product-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px;
+}
+.product-card {
+  background: var(--ink-gray); padding: 40px 36px;
+  position: relative; overflow: hidden;
+  cursor: pointer; transition: background 0.3s;
+  border: 1px solid rgba(255,255,255,0.04);
+}
+.product-card::before {
+  content: ''; position: absolute;
+  left: 0; top: 0; bottom: 0; width: 3px;
+  background: var(--card-accent, var(--cailo-red));
+  transform: scaleY(0); transform-origin: bottom;
+  transition: transform 0.3s ease;
+}
+.product-card:hover { background: #333; }
+.product-card:hover::before { transform: scaleY(1); }
+.product-card:nth-child(1) { --card-accent: var(--cailo-red); }
+.product-card:nth-child(2) { --card-accent: var(--cailo-teal); }
+.product-card:nth-child(3) { --card-accent: var(--cailo-gold); }
+.product-card:nth-child(4) { --card-accent: var(--cailo-blue); }
+.product-card:nth-child(5) { --card-accent: var(--cailo-orange); }
+.product-card:nth-child(6) { --card-accent: var(--cailo-red); }
+
+.product-icon {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--card-accent, var(--cailo-red));
+  opacity: 0.15; margin-bottom: 28px;
+  transition: opacity 0.3s;
+}
+.product-card:hover .product-icon { opacity: 0.3; }
+.product-num {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.1em; color: var(--ink-mid); margin-bottom: 12px;
+}
+.product-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 24px; text-transform: uppercase;
+  color: var(--ink-white); margin-bottom: 12px; line-height: 1.1;
+}
+.product-desc {
+  font-size: 13px; color: var(--ink-mid); line-height: 1.65;
+  margin-bottom: 24px;
+}
+.product-specs {
+  display: flex; flex-wrap: wrap; gap: 6px;
+}
+.spec-tag {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.06em; padding: 4px 10px;
+  border: 1px solid rgba(255,255,255,0.1); color: var(--ink-mid);
+}
+
+/* ── WHY ── */
+.why {
+  padding: 100px 64px;
+  background: var(--ink-black);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+.why-visual {
+  position: relative; height: 480px;
+}
+.why-block {
+  position: absolute; background: var(--ink-gray);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 900;
+  text-transform: uppercase;
+}
+.wb1 { left:0; top:0; width:200px; height:200px; font-size:64px; color: var(--cailo-red); }
+.wb2 { right:0; top:40px; width:240px; height:160px; font-size:36px; color: var(--ink-white); letter-spacing:0.08em; }
+.wb3 { left:40px; bottom:60px; width:180px; height:180px; background: var(--cailo-red); font-size:14px; color:#fff; letter-spacing:0.1em; flex-direction:column; gap:4px; }
+.wb4 { right:20px; bottom:0; width:200px; height:120px; background: var(--ink-dark); border:1px solid var(--ink-gray); font-size:11px; color:var(--ink-mid); letter-spacing:0.08em; }
+.wb3-num { font-size: 52px; line-height:1; }
+
+.why-content {}
+.why-list { list-style: none; margin-top: 40px; }
+.why-item {
+  padding: 28px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+  display: grid; grid-template-columns: 40px 1fr; gap: 20px; align-items: start;
+}
+.why-item:first-child { border-top: 1px solid rgba(255,255,255,0.08); }
+.why-icon {
+  width: 36px; height: 36px; border: 1px solid var(--cailo-red);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px; color: var(--cailo-red); flex-shrink: 0; margin-top: 2px;
+}
+.why-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600; font-size: 18px; text-transform: uppercase;
+  color: var(--ink-white); margin-bottom: 6px;
+}
+.why-text { font-size: 13px; color: var(--ink-mid); line-height: 1.65; }
+
+/* ── CERTIFICATIONS ── */
+.certs {
+  padding: 60px 64px;
+  background: var(--ink-dark);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; gap: 64px; flex-wrap: wrap;
+}
+.certs-label {
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mid);
+  flex-shrink: 0;
+}
+.cert-items { display: flex; gap: 40px; align-items: center; flex-wrap: wrap; }
+.cert-item {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 18px; letter-spacing: 0.08em;
+  color: var(--ink-light); opacity: 0.6;
+  transition: opacity 0.2s;
+}
+.cert-item:hover { opacity: 1; }
+
+/* ── TESTIMONIAL / CASE ── */
+.cases {
+  padding: 100px 64px;
+  background: var(--ink-black);
+}
+.case-grid {
+  display: grid; grid-template-columns: 2fr 1fr; gap: 2px; margin-top: 64px;
+}
+.case-main {
+  background: var(--cailo-red); padding: 56px;
+  position: relative; overflow: hidden;
+}
+.case-main::after {
+  content: '"'; position: absolute; right: 40px; top: 20px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 220px; font-weight: 900; color: rgba(0,0,0,0.15);
+  line-height: 1;
+}
+.case-quote {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600; font-size: 28px; line-height: 1.3;
+  color: #fff; margin-bottom: 32px; position: relative; z-index: 1;
+  max-width: 480px;
+}
+.case-source {
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65);
+}
+.case-side { display: flex; flex-direction: column; gap: 2px; }
+.case-mini {
+  flex: 1; background: var(--ink-gray); padding: 32px 28px;
+  display: flex; flex-direction: column; justify-content: space-between;
+}
+.case-mini-industry {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--cailo-red);
+  margin-bottom: 8px;
+}
+.case-mini-name {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 20px; color: var(--ink-white); margin-bottom: 8px;
+}
+.case-mini-desc {
+  font-size: 12px; color: var(--ink-mid); line-height: 1.6;
+}
+.case-mini-result {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 28px; color: var(--ink-white); margin-top: 20px;
+}
+.case-mini-result-label { font-size: 11px; color: var(--ink-mid); }
+
+/* ── CTA ── */
+.cta-section {
+  padding: 100px 64px;
+  background: var(--ink-dark);
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+}
+.cta-h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: clamp(48px, 6vw, 80px);
+  text-transform: uppercase; line-height: 0.95; color: var(--ink-white);
+}
+.cta-h2 span { color: var(--cailo-red); display: block; }
+.cta-body {
+  font-size: 15px; color: var(--ink-light); line-height: 1.7;
+  margin-bottom: 36px; font-weight: 300;
+}
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 28px; }
+.contact-field {
+  font-size: 13px; padding: 12px 16px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1); color: var(--ink-white);
+  outline: none; font-family: 'DM Sans', sans-serif;
+  transition: border-color 0.2s;
+}
+.contact-field:focus { border-color: var(--cailo-red); }
+.contact-field::placeholder { color: var(--ink-mid); }
+.contact-full { grid-column: 1 / -1; }
+textarea.contact-field { resize: none; height: 90px; }
+.submit-btn {
+  width: 100%; padding: 16px;
+  background: var(--cailo-red); color: #fff;
+  border: none; font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 700; font-size: 16px; letter-spacing: 0.12em;
+  text-transform: uppercase; cursor: pointer; transition: background 0.2s;
+}
+.submit-btn:hover { background: #c82e15; }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink-black);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding: 48px 64px;
+  display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; align-items: start;
+}
+.footer-brand {}
+.footer-logo {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 900; font-size: 28px; letter-spacing: 0.04em; color: var(--ink-white);
+}
+.footer-logo span { color: var(--cailo-red); }
+.footer-tagline {
+  font-size: 12px; color: var(--ink-mid); margin-top: 6px; font-style: italic;
+}
+.footer-zh {
+  font-size: 11px; color: var(--ink-mid); margin-top: 4px;
+  font-family: 'DM Mono', monospace; letter-spacing: 0.06em;
+}
+.footer-col-title {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-mid);
+  margin-bottom: 16px;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a {
+  font-size: 13px; color: var(--ink-light); text-decoration: none;
+  transition: color 0.2s;
+}
+.footer-links a:hover { color: var(--ink-white); }
+.footer-contact-item {
+  font-size: 13px; color: var(--ink-light); margin-bottom: 8px;
+  display: flex; align-items: flex-start; gap: 8px;
+}
+.footer-contact-label {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.08em; color: var(--ink-mid); text-transform: uppercase;
+  flex-shrink: 0; padding-top: 1px;
+}
+.footer-bottom {
+  grid-column: 1 / -1; padding-top: 32px;
+  border-top: 1px solid rgba(255,255,255,0.06);
+  display: flex; justify-content: space-between; align-items: center;
+}
+.footer-copy { font-size: 11px; color: var(--ink-mid); }
+.footer-cert-row { display: flex; gap: 16px; }
+.footer-cert {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: 0.08em; color: var(--ink-mid);
+  padding: 3px 8px; border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.hero-tag { animation: fadeUp 0.6s ease 0.1s both; }
+.hero-h1 { animation: fadeUp 0.6s ease 0.2s both; }
+.hero-sub { animation: fadeUp 0.6s ease 0.35s both; }
+.hero-actions { animation: fadeUp 0.6s ease 0.5s both; }
+.hero-stats { animation: fadeUp 0.4s ease 0.7s both; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 900px) {
+  nav { padding: 16px 24px; }
+  .nav-links { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-right { height: 240px; }
+  .swatch-tower { grid-template-rows: 1fr; grid-template-columns: repeat(7,1fr); }
+  .hero-left { padding: 100px 28px 280px; }
+  .hero-stats { right: 0; }
+  .products, .why, .cases, .cta-section { padding: 60px 28px; }
+  .why { grid-template-columns: 1fr; }
+  .case-grid { grid-template-columns: 1fr; }
+  .cta-section { grid-template-columns: 1fr; }
+  footer { grid-template-columns: 1fr; padding: 40px 28px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .product-grid { grid-template-columns: 1fr; }
+  .certs { padding: 40px 28px; }
+}
+</style>
 </head>
 <body>
-<p class="p1"><span class="s1">C</span><span class="s2">A</span><span class="s1">ILO INKS</span></p>
-<p class="p2"><span class="s1">彩乐新材料</span></p>
-<p class="p3"><span class="s1">GET A SAMPLE</span></p>
-<p class="p4"><span class="s3">GRAVURE PRINTING INKS </span><span class="s4">·</span><span class="s3"> SINCE 2015</span></p>
-<h1 style="margin: 0.0px 0.0px 32.0px 0.0px; font: 64.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6"><span class="s3">VIBRANT<br>
-COLOR,<br>
-</span><span class="s5">EFFORTLESS</span><span class="s3"><br>
-FLOW.</span></h1>
-<p class="p6"><span class="s3">High-performance gravure inks for flexible packaging,<br>
-tissue printing, and specialty substrates.<br>
-</span><span class="s6">Trusted by factories across Asia and beyond.</span></p>
-<p class="p7"><span class="s3">REQUEST FREE SAMPLE</span></p>
-<p class="p8"><span class="s3">VIEW PRODUCTS</span></p>
-<p class="p9"><span class="s7">MAGENTA SERIES</span></p>
-<p class="p9"><span class="s8">SCARLET SERIES</span></p>
-<p class="p9"><span class="s9">TEAL SERIES</span></p>
-<p class="p9"><span class="s10">CARBON BLACK</span></p>
-<p class="p9"><span class="s11">COBALT SERIES</span></p>
-<p class="p9"><span class="s12">GOLD SERIES</span></p>
-<p class="p9"><span class="s13">AMBER SERIES</span></p>
-<p class="p10"><span class="s3"></span><br></p>
-<p class="p11"><span class="s3">10</span><span class="s5">+</span></p>
-<p class="p12"><span class="s3">Years Manufacturing</span></p>
-<p class="p11"><span class="s3">50</span><span class="s5">+</span></p>
-<p class="p12"><span class="s3">Ink Formulations</span></p>
-<p class="p11"><span class="s3">30</span><span class="s5">+</span></p>
-<p class="p12"><span class="s3">Global Clients</span></p>
-<p class="p13"><span class="s3">WATER-BASED GRAVURE INKS</span><span class="s14"> </span><span class="s3">ALCOHOL-BASED SERIES</span><span class="s14"> </span><span class="s3">COMPOSITE INKS</span><span class="s14"> </span><span class="s3">TDS / MSDS CERTIFIED</span><span class="s14"> </span><span class="s3">FLEXIBLE PACKAGING</span><span class="s14"> </span><span class="s3">TISSUE PRINTING</span><span class="s14"> </span><span class="s3">OEM AVAILABLE</span><span class="s14"> </span><span class="s3">FAST DELIVERY</span><span class="s14"> </span><span class="s3">WATER-BASED GRAVURE INKS</span><span class="s14"> </span><span class="s3">ALCOHOL-BASED SERIES</span><span class="s14"> </span><span class="s3">COMPOSITE INKS</span><span class="s14"> </span><span class="s3">TDS / MSDS CERTIFIED</span><span class="s14"> </span><span class="s3">FLEXIBLE PACKAGING</span><span class="s14"> </span><span class="s3">TISSUE PRINTING</span><span class="s14"> </span><span class="s3">OEM AVAILABLE</span><span class="s14"> </span><span class="s3">FAST DELIVERY</span></p>
-<p class="p4"><span class="s10">PRODUCT LINES</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 40.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6"><span class="s10">INKS BUILT</span><span class="s3"><br>
-</span><span class="s10">FOR PERFORMANCE</span></h2>
-<p class="p15"><span class="s3">FULL CATALOG</span></p>
-<p class="p16"><span class="s3"></span><br></p>
-<p class="p17"><span class="s15">01 / 06</span></p>
-<p class="p1"><span class="s15">WATER-BASED</span></p>
-<p class="p1"><span class="s15">GRAVURE INKS</span></p>
-<p class="p18"><span class="s15">Low VOC, eco-friendly formulation ideal for food packaging and tissue printing. Compliant with major international safety standards.</span></p>
-<p class="p17"><span class="s15">Food Packaging</span></p>
-<p class="p17"><span class="s15">Low VOC</span></p>
-<p class="p17"><span class="s15">BOPP / PET</span></p>
-<p class="p19"><span class="s3"></span><br></p>
-<p class="p17"><span class="s15">02 / 06</span></p>
-<p class="p1"><span class="s15">ALCOHOL-BASED</span></p>
-<p class="p1"><span class="s15">GRAVURE INKS</span></p>
-<p class="p18"><span class="s15">High-speed printing performance with excellent adhesion on plastic films. Suitable for high-volume flexible packaging production.</span></p>
-<p class="p17"><span class="s15">High Speed</span></p>
-<p class="p17"><span class="s15">PE / CPP</span></p>
-<p class="p17"><span class="s15">Strong Adhesion</span></p>
-<p class="p20"><span class="s3"></span><br></p>
-<p class="p17"><span class="s15">03 / 06</span></p>
-<p class="p1"><span class="s15">COMPOSITE</span></p>
-<p class="p1"><span class="s15">LAMINATION INKS</span></p>
-<p class="p18"><span class="s15">Designed for multi-layer laminated packaging. Superior bond strength, heat resistance, and color stability under lamination pressure.</span></p>
-<p class="p17"><span class="s15">Lamination</span></p>
-<p class="p17"><span class="s15">Heat Resistant</span></p>
-<p class="p17"><span class="s15">Multi-layer</span></p>
-<p class="p21"><span class="s3"></span><br></p>
-<p class="p17"><span class="s15">04 / 06</span></p>
-<p class="p1"><span class="s15">TISSUE &amp;</span></p>
-<p class="p1"><span class="s15">PAPER INKS</span></p>
-<p class="p18"><span class="s15">Specialized inks for tissue, napkin and kraft paper printing. Fast-drying with vivid color reproduction and skin-safe formulation.</span></p>
-<p class="p17"><span class="s15">Tissue Paper</span></p>
-<p class="p17"><span class="s15">Skin-Safe</span></p>
-<p class="p17"><span class="s15">Fast Dry</span></p>
-<p class="p22"><span class="s3"></span><br></p>
-<p class="p17"><span class="s15">05 / 06</span></p>
-<p class="p1"><span class="s15">SURFACE</span></p>
-<p class="p1"><span class="s15">PRINTING INKS</span></p>
-<p class="p18"><span class="s15">For surface printing on PE bags, woven bags, and non-woven fabrics. Excellent rub resistance and outdoor durability.</span></p>
-<p class="p17"><span class="s15">PE Bags</span></p>
-<p class="p17"><span class="s15">Rub Resistant</span></p>
-<p class="p17"><span class="s15">Outdoor Use</span></p>
-<p class="p16"><span class="s3"></span><br></p>
-<p class="p17"><span class="s15">06 / 06</span></p>
-<p class="p1"><span class="s15">CUSTOM</span></p>
-<p class="p1"><span class="s15">OEM FORMULATION</span></p>
-<p class="p18"><span class="s15">Bespoke ink development for your specific substrate, press speed, and regulatory requirements. Full R&amp;D support included.</span></p>
-<p class="p17"><span class="s15">Custom Colors</span></p>
-<p class="p17"><span class="s15">R&amp;D Support</span></p>
-<p class="p17"><span class="s15">Pantone Match</span></p>
-<p class="p12"><span class="s10">CERTIFICATIONS &amp; STANDARDS</span></p>
-<p class="p23"><span class="s10">TDS</span></p>
-<p class="p23"><span class="s10">MSDS</span></p>
-<p class="p23"><span class="s10">REACH</span></p>
-<p class="p23"><span class="s10">RoHS</span></p>
-<p class="p23"><span class="s10">ISO 9001</span></p>
-<p class="p23"><span class="s10">GB/T</span></p>
-<p class="p24"><span class="s16">彩</span><span class="s17"> </span><span class="s15">CAILO</span></p>
-<p class="p25"><span class="s7">98%</span></p>
-<p class="p26"><span class="s7">COLOR PASS RATE</span></p>
-<p class="p12"><span class="s10">ZHEJIANG, CHINA</span></p>
-<p class="p4"><span class="s18">WHY CHOOSE CAILO</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 40.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6"><span class="s18">PRECISION YOU</span><span class="s3"><br>
-</span><span class="s18">CAN PRINT ON</span></h2>
-<ul class="ul1">
-  <li class="li18"><span class="s19"></span><span class="s20">⬡</span><span class="s21"> </span><span class="s22">TECHNICAL R&amp;D LAB</span><span class="s23"><br>
-</span><span class="s18">In-house laboratory with advanced viscosity, adhesion, and color testing. Every batch certified before shipping.</span><span class="s3"><br>
-</span><span class="s14"><br>
-</span><span class="s24">◈</span><span class="s21"> </span><span class="s22">FAST LEAD TIMES</span><span class="s23"><br>
-</span><span class="s18">Standard orders fulfilled in 7–15 days. Sample dispatch within 48 hours of confirmation.</span><span class="s3"><br>
-</span><span class="s14"><br>
-</span><span class="s25">◎</span><span class="s21"> </span><span class="s22">ECO-FRIENDLY FOCUS</span><span class="s23"><br>
-</span><span class="s18">Water-based product line with low VOC, meeting environmental standards across Southeast Asia and Europe.</span><span class="s3"><br>
-</span><span class="s14"><br>
-</span><span class="s25">◇</span><span class="s21"> </span><span class="s22">GLOBAL TECHNICAL SUPPORT</span><span class="s23"><br>
-</span><span class="s18">Dedicated technical team available for troubleshooting, press trials, and formulation adjustments.</span><span class="s3"><br>
-</span></li>
-</ul>
-<p class="p4"><span class="s18">CLIENT CASES</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 40.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6"><span class="s18">PROVEN ON PRESS</span></h2>
-<p class="p27"><span class="s7">"Cailo's water-based inks solved our odor problem in tissue printing — color consistency improved dramatically and we passed all safety audits."</span></p>
-<p class="p28"><span class="s7">— PROCUREMENT MANAGER </span><span class="s26">·</span><span class="s7"> TISSUE PACKAGING GROUP </span><span class="s26">·</span><span class="s7"> ZHEJIANG</span></p>
-<p class="p29"><span class="s15">LOGISTICS PACKAGING</span></p>
-<p class="p30"><span class="s15">SF Express Supply Chain</span></p>
-<p class="p31"><span class="s15">High-volume courier bag printing requiring consistent color across 3 production lines.</span></p>
-<p class="p32"><span class="s15">↓ 40%</span></p>
-<p class="p12"><span class="s15">Ink waste reduction</span></p>
-<p class="p29"><span class="s15">FOOD FLEXIBLE PACKAGING</span></p>
-<p class="p30"><span class="s15">Regional Snack Brand </span><span class="s27">·</span><span class="s15"> Vietnam</span></p>
-<p class="p31"><span class="s15">Custom formulation for BOPP laminated film meeting Vietnamese food contact standards.</span></p>
-<p class="p32"><span class="s15">100%</span></p>
-<p class="p12"><span class="s15">Regulatory pass rate</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 48.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6"><span class="s10">READY TO</span></h2>
-<p class="p34"><span class="s10">PRINT</span></p>
-<h2 style="margin: 0.0px 0.0px 0.0px 0.0px; font: 48.0px 'Helvetica Neue'; color: #f1eee6; -webkit-text-stroke: #f1eee6"><span class="s10">BETTER?</span></h2>
-<p class="p35"><span class="s10">Send us your substrate, print speed, and color requirements. We'll recommend the right product and dispatch a free sample within 48 hours.</span></p>
-<p class="p36"><span class="s3"></span><br></p>
-<p class="p36"><span class="s3"></span><br></p>
-<p class="p36"><span class="s3"></span><br></p>
-<p class="p36"><span class="s3"></span><br></p>
-<p class="p37"><span class="s7">SEND INQUIRY →</span></p>
-<p class="p32"><span class="s18">C</span><span class="s28">A</span><span class="s18">ILO INKS</span></p>
-<p class="p31"><span class="s18">Vibrant Color, Effortless Flow.</span></p>
-<p class="p2"><span class="s18">彩乐新材料（浙江）有限公司</span></p>
-<p class="p17"><span class="s18">QUICK LINKS</span></p>
-<ul class="ul1">
-  <li class="li38"><span class="s29"></span><span class="s18">Products</span></li>
-  <li class="li38"><span class="s29"></span><span class="s18">Why Cailo</span></li>
-  <li class="li38"><span class="s29"></span><span class="s18">Client Cases</span></li>
-  <li class="li38"><span class="s29"></span><span class="s18">Technical Downloads</span></li>
-  <li class="li38"><span class="s29"></span><span class="s18">Privacy Policy</span></li>
-</ul>
-<p class="p17"><span class="s18">CONTACT US</span></p>
-<p class="p17"><span class="s18">EMAIL</span></p>
-<p class="p8"><span class="s18">shl719059959@gmail.com</span></p>
-<p class="p17"><span class="s18">WHATSAPP</span></p>
-<p class="p8"><span class="s18">+86 </span><span class="s30">·</span><span class="s18"> 18117233411</span></p>
-<p class="p17"><span class="s18">FACTORY</span></p>
-<p class="p8"><span class="s18">Zhejiang Province, China</span></p>
-<p class="p17"><span class="s18">EXPORT</span></p>
-<p class="p8"><span class="s18">FOB Ningbo / Shanghai</span></p>
-<p class="p39"><span class="s18">© 2025 Cailo Inks </span><span class="s31">·</span><span class="s18"> </span><span class="s32">彩乐新材料（浙江）有限公司</span><span class="s18"> </span><span class="s31">·</span><span class="s18"> All rights reserved.</span></p>
-<p class="p40"><span class="s18">TDS</span></p>
-<p class="p40"><span class="s18">MSDS</span></p>
-<p class="p40"><span class="s18">REACH</span></p>
-<p class="p40"><span class="s18">ISO 9001</span></p>
-</body>
-</html>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo">
+    <div class="nav-logo-en">C<span>A</span>ILO INKS</div>
+    <div class="nav-logo-zh">彩乐新材料</div>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#products">Products</a></li>
+    <li><a href="#why">Why Cailo</a></li>
+    <li><a href="#cases">Cases</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get a Sample</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-left">
+    <div class="hero-tag">Gravure Printing Inks · Since 2015</div>
+    <h1 class="hero-h1">
+      Vibrant<br>
+      Color,<br>
+      <span class="accent">Effortless</span><br>
+      Flow.
+    </h1>
+    <p class="hero-sub">
+      High-performance gravure inks for flexible packaging,<br>
+      tissue printing, and specialty substrates.<br>
+      <strong>Trusted by factories across Asia and beyond.</strong>
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Request Free Sample</a>
+      <a href="#products" class="btn-secondary">View Products</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="swatch-tower">
+      <div class="swatch s1"><span class="swatch-label">Magenta Series</span></div>
+      <div class="swatch s2"><span class="swatch-label">Scarlet Series</span></div>
+      <div class="swatch s3"><span class="swatch-label">Teal Series</span></div>
+      <div class="swatch s4"><span class="swatch-label">Carbon Black</span></div>
+      <div class="swatch s5"><span class="swatch-label">Cobalt Series</span></div>
+      <div class="swatch s6"><span class="swatch-label">Gold Series</span></div>
+      <div class="swatch s7"><span class="swatch-label">Amber Series</span></div>
+    </div>
+    <div class="ink-grid"></div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">10<span>+</span></div>
+      <div class="stat-desc">Years Manufacturing · Est. 2015</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">50<span>+</span></div>
+      <div class="stat-desc">Ink Formulations</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">80<span>+</span></div>
+      <div class="stat-desc">Global Clients</div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-track">
+    <div class="marquee-item">Water-Based Gravure Inks</div>
+    <div class="marquee-item">Alcohol-Based Series</div>
+    <div class="marquee-item">Composite Inks</div>
+    <div class="marquee-item">TDS / MSDS Certified</div>
+    <div class="marquee-item">Flexible Packaging</div>
+    <div class="marquee-item">Tissue Printing</div>
+    <div class="marquee-item">OEM Available</div>
+    <div class="marquee-item">Fast Delivery</div>
+    <!-- duplicate for loop -->
+    <div class="marquee-item">Water-Based Gravure Inks</div>
+    <div class="marquee-item">Alcohol-Based Series</div>
+    <div class="marquee-item">Composite Inks</div>
+    <div class="marquee-item">TDS / MSDS Certified</div>
+    <div class="marquee-item">Flexible Packaging</div>
+    <div class="marquee-item">Tissue Printing</div>
+    <div class="marquee-item">OEM Available</div>
+    <div class="marquee-item">Fast Delivery</div>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="section-header">
+    <div>
+      <div class="section-tag">Product Lines</div>
+      <h2 class="section-h2">Inks Built<br>for Performance</h2>
+    </div>
+    <a href="#" class="section-link">Full Catalog</a>
+  </div>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-icon"></div>
+      <div class="product-num">01 / 06</div>
+      <div class="product-name">Water-Based<br>Gravure Inks</div>
+      <div class="product-desc">Low VOC, eco-friendly formulation ideal for food packaging and tissue printing. Compliant with major international safety standards.</div>
+      <div class="product-specs">
+        <span class="spec-tag">Food Packaging</span>
+        <span class="spec-tag">Low VOC</span>
+        <span class="spec-tag">BOPP / PET</span>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-icon"></div>
+      <div class="product-num">02 / 06</div>
+      <div class="product-name">Alcohol-Based<br>Gravure Inks</div>
+      <div class="product-desc">High-speed printing performance with excellent adhesion on plastic films. Suitable for high-volume flexible packaging production.</div>
+      <div class="product-specs">
+        <span class="spec-tag">High Speed</span>
+        <span class="spec-tag">PE / CPP</span>
+        <span class="spec-tag">Strong Adhesion</span>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-icon"></div>
+      <div class="product-num">03 / 06</div>
+      <div class="product-name">Composite<br>Lamination Inks</div>
+      <div class="product-desc">Designed for multi-layer laminated packaging. Superior bond strength, heat resistance, and color stability under lamination pressure.</div>
+      <div class="product-specs">
+        <span class="spec-tag">Lamination</span>
+        <span class="spec-tag">Heat Resistant</span>
+        <span class="spec-tag">Multi-layer</span>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-icon"></div>
+      <div class="product-num">04 / 06</div>
+      <div class="product-name">Tissue &amp;<br>Paper Inks</div>
+      <div class="product-desc">Specialized inks for tissue, napkin and kraft paper printing. Fast-drying with vivid color reproduction and skin-safe formulation.</div>
+      <div class="product-specs">
+        <span class="spec-tag">Tissue Paper</span>
+        <span class="spec-tag">Skin-Safe</span>
+        <span class="spec-tag">Fast Dry</span>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-icon"></div>
+      <div class="product-num">05 / 06</div>
+      <div class="product-name">Surface<br>Printing Inks</div>
+      <div class="product-desc">For surface printing on PE bags, woven bags, and non-woven fabrics. Excellent rub resistance and outdoor durability.</div>
+      <div class="product-specs">
+        <span class="spec-tag">PE Bags</span>
+        <span class="spec-tag">Rub Resistant</span>
+        <span class="spec-tag">Outdoor Use</span>
+      </div>
+    </div>
+    <div class="product-card">
+      <div class="product-icon"></div>
+      <div class="product-num">06 / 06</div>
+      <div class="product-name">Custom<br>OEM Formulation</div>
+      <div class="product-desc">Bespoke ink development for your specific substrate, press speed, and regulatory requirements. Full R&amp;D support included.</div>
+      <div class="product-specs">
+        <span class="spec-tag">Custom Colors</span>
+        <span class="spec-tag">R&amp;D Support</span>
+        <span class="spec-tag">Pantone Match</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTS STRIP -->
+<div class="certs">
+  <div class="certs-label">Certifications &amp; Standards</div>
+  <div class="cert-items">
+    <div class="cert-item">TDS</div>
+    <div class="cert-item">MSDS</div>
+    <div class="cert-item">REACH</div>
+    <div class="cert-item">RoHS</div>
+    <div class="cert-item">ISO 9001</div>
+    <div class="cert-item">GB/T</div>
+  </div>
+</div>
+
+<!-- WHY CAILO -->
+<section class="why" id="why">
+  <div class="why-visual">
+    <div class="why-block wb1">彩</div>
+    <div class="why-block wb2">CAILO</div>
+    <div class="why-block wb3">
+      <div class="wb3-num">98%</div>
+      <div style="font-size:11px;letter-spacing:0.1em;opacity:0.8">COLOR PASS RATE</div>
+    </div>
+    <div class="why-block wb4">ZHEJIANG, CHINA</div>
+  </div>
+  <div class="why-content">
+    <div class="section-tag">Why Choose Cailo</div>
+    <h2 class="section-h2">Precision You<br>Can Print On</h2>
+    <ul class="why-list">
+      <li class="why-item">
+        <div class="why-icon">⬡</div>
+        <div>
+          <div class="why-title">Technical R&amp;D Lab</div>
+          <div class="why-text">In-house laboratory with advanced viscosity, adhesion, and color testing. Every batch certified before shipping.</div>
+        </div>
+      </li>
+      <li class="why-item">
+        <div class="why-icon">◈</div>
+        <div>
+          <div class="why-title">Fast Lead Times</div>
+          <div class="why-text">Standard orders fulfilled in 7–15 days. Sample dispatch within 48 hours of confirmation.</div>
+        </div>
+      </li>
+      <li class="why-item">
+        <div class="why-icon">◎</div>
+        <div>
+          <div class="why-title">Eco-Friendly Focus</div>
+          <div class="why-text">Water-based product line with low VOC, meeting environmental standards across Southeast Asia and Europe.</div>
+        </div>
+      </li>
+      <li class="why-item">
+        <div class="why-icon">◇</div>
+        <div>
+          <div class="why-title">Global Technical Support</div>
+          <div class="why-text">Dedicated technical team available for troubleshooting, press trials, and formulation adjustments.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- CASES -->
+<section class="cases" id="cases">
+  <div class="section-tag">Client Cases</div>
+  <h2 class="section-h2">Proven on Press</h2>
+  <div class="case-grid">
+    <div class="case-main">
+      <div class="case-quote">"Cailo's water-based inks solved our odor problem in tissue printing — color consistency improved dramatically and we passed all safety audits."</div>
+      <div class="case-source">— Procurement Manager · Tissue Packaging Group · Zhejiang</div>
+    </div>
+    <div class="case-side">
+      <div class="case-mini">
+        <div>
+          <div class="case-mini-industry">Logistics Packaging</div>
+          <div class="case-mini-name">SF Express Supply Chain</div>
+          <div class="case-mini-desc">High-volume courier bag printing requiring consistent color across 3 production lines.</div>
+        </div>
+        <div>
+          <div class="case-mini-result">↓ 40%</div>
+          <div class="case-mini-result-label">Ink waste reduction</div>
+        </div>
+      </div>
+      <div class="case-mini">
+        <div>
+          <div class="case-mini-industry">Food Flexible Packaging</div>
+          <div class="case-mini-name">Regional Snack Brand · Vietnam</div>
+          <div class="case-mini-desc">Custom formulation for BOPP laminated film meeting Vietnamese food contact standards.</div>
+        </div>
+        <div>
+          <div class="case-mini-result">100%</div>
+          <div class="case-mini-result-label">Regulatory pass rate</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section class="cta-section" id="contact">
+  <div>
+    <h2 class="cta-h2">Ready to<br><span>Print</span>Better?</h2>
+  </div>
+  <div>
+    <p class="cta-body">
+      Send us your substrate, print speed, and color requirements. We'll recommend the right product and dispatch a free sample within 48 hours.
+    </p>
+    <div class="contact-grid">
+      <input class="contact-field" type="text" placeholder="Your Name">
+      <input class="contact-field" type="text" placeholder="Company">
+      <input class="contact-field" type="email" placeholder="Email Address">
+      <input class="contact-field" type="text" placeholder="WhatsApp / Phone">
+      <textarea class="contact-field contact-full" placeholder="Tell us about your printing needs — substrate, speed, target market..."></textarea>
+    </div>
+    <button class="submit-btn">Send Inquiry →</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-brand">
+    <div class="footer-logo">C<span style="color:var(--cailo-red)">A</span>ILO INKS</div>
+    <div class="footer-tagline">Vibrant Color, Effortless Flow.</div>
+    <div class="footer-zh">彩乐新材料（浙江）有限公司</div>
+  </div>
+  <div>
+    <div class="footer-col-title">Quick Links</div>
+    <ul class="footer-links">
+      <li><a href="#products">Products</a></li>
+      <li><a href="#why">Why Cailo</a></li>
+      <li><a href="#cases">Client Cases</a></li>
+      <li><a href="#">Technical Downloads</a></li>
+      <li><a href="#">Privacy Policy</a></li>
+    </ul>
+  </div>
+  <div>
+    <div class="footer-col-title">Contact Us</div>
+    <div class="footer-contact-item">
+      <span class="footer-contact-label">Email</span>
+      <span>shl719059959@gmail.com</span>
+    </div>
+    <div class="footer-contact-item">
+      <span class="footer-contact-label">WhatsApp</span>
+      <span>+86 18117233411</span>
+    </div>
+    <div class="footer-contact-item">
+      <span class="footer-contact-label">Factory</span>
+      <span>嘉兴市, 浙江省, China</span>
+    </div>
+    <div class="footer-contact-item">
+      <span class="footer-contact-label">Export</span>
+      <span>FOB Ningbo / Shanghai</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Cailo Inks · 彩乐新材料（浙江）有限公司 · All rights reserved.</div>
+    <div class="footer-cert-row">
+      <span class="footer-cert">TDS</span>
+      <span class="footer-cert">MSDS</span>
+      <span class
