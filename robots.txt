@@ -1,0 +1,21 @@
+# Cailo Inks - Robots.txt
+# https://www.cailo-inks.com
+
+User-agent: *
+Allow: /
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.cailo-inks.com/sitemap.xml
