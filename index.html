@@ -4,6 +4,18 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- ── GOOGLE ANALYTICS 4 ── -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HH4JKN0J2P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-HH4JKN0J2P', {
+    'anonymize_ip': true,           // 匿名化客户 IP,符合 GDPR
+    'send_page_view': true          // 自动发送页面浏览事件
+  });
+</script>
+
 <!-- ── PRIMARY SEO ── -->
 <title>Toluene-Free Gravure Ink Manufacturer for Flexible Packaging | Cailo Inks</title>
 <meta name="description" content="Solvent-based gravure inks for flexible packaging converters in Vietnam, Indonesia & Thailand. Toluene-free & MEK-free formulations compliant with TCVN 13928 / GB 9685. Free samples, TDS on request, 10-16 day delivery from Jiaxing Port. 20+ years manufacturing.">
@@ -1083,6 +1095,65 @@ footer {
   </svg>
 </a>
 
+<!-- ── GA4 EVENT TRACKING ── -->
+<script>
+(function() {
+  // 等 DOM 就绪
+  function ready(fn) {
+    if (document.readyState !== 'loading') fn();
+    else document.addEventListener('DOMContentLoaded', fn);
+  }
+  // 安全发送 GA4 事件
+  function track(eventName, params) {
+    if (typeof gtag !== 'undefined') {
+      gtag('event', eventName, params || {});
+    }
+  }
+
+  ready(function() {
+    // 1. 浮动 WhatsApp 按钮点击
+    var waFloat = document.querySelector('.wa-float');
+    if (waFloat) {
+      waFloat.addEventListener('click', function() {
+        track('whatsapp_click', { 'location': 'floating_button' });
+      });
+    }
+
+    // 2. 所有指向 wa.me 的链接(包括页脚)
+    document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+      // 浮动按钮已经单独追踪了,跳过
+      if (link.classList.contains('wa-float')) return;
+      link.addEventListener('click', function() {
+        track('whatsapp_click', { 'location': 'footer' });
+      });
+    });
+
+    // 3. Nav 栏 "Get a Sample" 按钮
+    var navCta = document.querySelector('.nav-cta');
+    if (navCta) {
+      navCta.addEventListener('click', function() {
+        track('cta_click', { 'location': 'nav', 'label': 'get_a_sample' });
+      });
+    }
+
+    // 4. 滚动深度追踪(看客户滑到哪个区块)
+    var scrollMarks = [25, 50, 75, 100];
+    var fired = {};
+    window.addEventListener('scroll', function() {
+      var scrollPct = Math.round(
+        (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100
+      );
+      scrollMarks.forEach(function(mark) {
+        if (scrollPct >= mark && !fired[mark]) {
+          fired[mark] = true;
+          track('scroll_depth', { 'percent': mark });
+        }
+      });
+    }, { passive: true });
+  });
+})();
+</script>
+
 <!-- ── FORM SUBMIT HANDLER ── -->
 <script>
 (function() {
@@ -1128,6 +1199,14 @@ footer {
         form.reset();
         // 重新填充隐藏字段(reset 会清空 hidden input 的 value)
         keyInput.value = keyInput.defaultValue;
+        // GA4 转化事件:询盘提交成功(核心转化指标)
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'generate_lead', {
+            'event_category': 'inquiry',
+            'event_label': 'website_form',
+            'value': 1
+          });
+        }
       } else {
         status.className = 'form-status error';
         status.textContent = (payload.result && payload.result.message) ? payload.result.message : 'Something went wrong. Please try again or message us on WhatsApp.';
